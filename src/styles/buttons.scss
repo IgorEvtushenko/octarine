@@ -1,0 +1,79 @@
+@import './variables.scss';
+
+.buttons-wrapper{
+    display: flex;
+    .btn{
+        display: block;
+        text-decoration: none;
+        color: $white;
+        text-align: center;
+        cursor: pointer;
+    }
+    .pink{
+        background: $pink;
+        border: 1px solid $pink;
+    }
+    .blue{
+        background: $light-blue;
+        border: 1px solid $light-blue;
+    }
+    .form-edit-button{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .buttons-wrapper{
+        margin-bottom: 2.63vw;
+        .btn{
+            border-radius: 1vw;
+            min-width: 7.36vw;
+            padding: 0 1.8vw;
+            font-size: 0.73vw;
+            line-height: 2.1vw;
+            font-weight: 600;
+    
+            &:first-child{
+                margin-right: 1.1vw;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .buttons-wrapper{
+        margin-bottom: 2.63vw;
+
+        .btn{
+            border-radius: 1.5vw;
+            min-width: 12vw;
+            padding: 0 2.8vw;
+            font-size: 1.7vw;
+            line-height: 3vw;
+            font-weight: 600;
+    
+            &:first-child{
+                margin-right: 2vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .buttons-wrapper{
+        margin-bottom: 2.63vw;
+
+        .btn{
+            border-radius: 3vw;
+            min-width: 20vw;
+            padding: 0 2.8vw;
+            font-size: 3vw;
+            line-height: 6vw;
+            font-weight: 600;
+    
+            &:first-child{
+                margin-right: 4vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+.add-film-form-wrapper{
+    max-height: 0;
+    overflow: hidden;
+    background: $white;
+    border-radius: $add-block-radius;
+    box-shadow: 0 0 0.8vw $dark-grey;
+    transition: max-height 0.7s ease 0s;
+
+    .add-film-item{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    
+        span{
+            text-transform: uppercase;
+            color: $black;
+        }
+
+        .add-input{
+            border: 1px solid $grey;
+        }
+    
+        .description{
+            overflow: auto;
+            resize: vertical;
+        }
+    }
+
+    .inCorrect{
+        &:after{
+            content: 'Incorrect value';
+            position: absolute;
+            color: $pink;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .add-film-form-wrapper{
+        padding-left: 5.57vw;
+        margin: 0 19.15vw 2.7vw 19.15vw;
+    
+        .add-film-item{
+            padding-bottom: 1.58vw;
+        
+            span{
+                font-size: 0.73vw;
+                margin-bottom: 1.05vw;
+            }
+
+            .add-input{
+                height: 2.63vw;
+                width: 26.3vw;
+                border-radius: 0.3vw;
+                padding: 0 1vw;
+            }
+        
+            .description{
+                min-height: 5.26vw;
+                max-height: 90vh;
+                padding: 1vw;
+            }
+        
+            &:first-child{
+                padding-top: 2.1vw;
+            }
+        }
+    }
+
+    .inCorrect{
+        &:after{
+            font-size: 1.1vw;
+            bottom: 0.2vw;
+            left: 17.7vw;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .add-film-form-wrapper{
+        padding-left: 6vw;
+        margin: 0 17vw 4vw 17vw;
+    
+        .add-film-item{
+            padding-bottom: 3vw;
+        
+            span{
+                font-size: 1.1vw;
+                margin-bottom: 1.2vw;
+            }
+
+            .add-input{
+                height: 4vw;
+                width: 40vw;
+                border-radius: 0.5vw;
+                padding: 0 2vw;
+            }
+        
+            .description{
+                min-height: 15vw;
+                resize: none;
+                padding: 2vw;
+            }
+        
+            &:first-child{
+                padding-top: 4vw;
+            }
+        }
+    }
+
+    .inCorrect{
+        &:after{
+            font-size: 1.6vw;
+            bottom: 0.7vw;
+            left: 28vw;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .add-film-form-wrapper{
+        padding: 0 4vw;
+        margin: 0 7vw 8vw 7vw;
+    
+        .add-film-item{
+            padding-bottom: 6vw;
+        
+            span{
+                font-size: 2vw;
+                margin-bottom: 3vw;
+            }
+
+            .add-input{
+                height: 7vw;
+                border-radius: 0.5vw;
+                padding: 0 2vw;
+            }
+        
+            .description{
+                min-height: 30vw;
+                resize: none;
+                padding: 2vw;
+            }
+        
+            &:first-child{
+                padding-top: 9vw;
+            }
+        }
+    }
+
+    .inCorrect{
+        &:after{
+            font-size: 2.3vw;
+            bottom: 3vw;
+            left: 61.4vw;
+        }
+    }
+}

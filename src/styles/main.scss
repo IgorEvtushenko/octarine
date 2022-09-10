@@ -1,0 +1,412 @@
+@import './variables.scss';
+@import './buttons.scss';
+@import './add-film-form.scss';
+
+main{
+    position: relative;
+    z-index: 1;
+}
+
+.film-wrapper{
+    border-radius: $block-radius;
+    overflow: hidden;
+
+    &:last-child{
+        margin-bottom: 7.57vw;
+    }
+    
+    .film-bg{
+
+        .film-content{
+            display: flex;
+            align-items: flex-start;
+            backdrop-filter: blur(1.3vw);
+            -webkit-backdrop-filter: blur(1.3vw);
+            -moz-backdrop-filter: blur(1.3vw);
+            -ms-backdrop-filter: blur(1.3vw);
+            -o-backdrop-filter: blur(1.3vw);
+            background: rgba(0, 0, 0, 0.5);
+
+            .film-info{
+                color: $white;
+            }
+        }
+    }
+
+    .info-item{
+        display: flex;
+        align-items: flex-start;
+
+        .info-title{
+            text-transform: uppercase;
+        }
+    }
+
+    .coments{
+        background-color: $white;
+
+        .comments-button{
+            cursor: pointer;
+            color: $pink;
+            display: inline-block;
+
+            .comments-arrow{
+                background: url('../images/arrow.svg') no-repeat center;
+                background-size: cover;
+                display: inline-block;
+                border-radius: 50%;
+                transform: rotate(0deg);
+                transition: transform 0.3s linear 0s;
+            }
+        }
+
+        .comments-wrapper{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.9s ease 0s;
+
+            .coment-item{
+                border-bottom: 2px solid $grey;
+
+                &:first-child{
+                    border-top: 2px solid $grey;
+                }
+            }
+            
+            .add-coment-input{
+                width: 100%;
+                border: 1px solid $grey;
+            }
+        }
+
+        .comments-checkbox{
+            display: none;
+        }
+
+        .comments-checkbox:checked ~* .comments-arrow{
+            transform: rotate(-180deg);
+        }
+
+        .comments-checkbox:checked ~ .comments-wrapper{
+            max-height: 150vh;
+            overflow: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px){
+
+    .film-wrapper{
+        margin: 0 19.15vw 2.7vw 19.15vw;
+        
+        .film-bg{
+    
+            .film-content{
+                padding: 4.31vw;
+
+                .poster-image{
+                    height: 23.47vw;
+                    width: 16.31vw;
+                    border-radius: 0.3vw;
+                }
+    
+                .film-info{
+                    margin-left: 2.63vw;
+                    font-size: 0.85vw;
+                    font-weight: 200;
+                    width: 35vw;
+                }
+            }
+        }
+    
+        .film-title{
+            font-size: 1.9vw;
+            font-weight: 600;
+            line-height: 1.9vw;
+        }
+    
+        .film-description{
+            margin-top: 1.58vw;
+            line-height: 1.6vw;
+        }
+    
+        .info-item{
+            margin-top: 0.85vw;
+    
+            .info-title{
+                line-height: 1.6vw;
+                width: 8.84vw;
+            }
+    
+            .info-content{
+                line-height: 1.6vw;
+                width: 27vw;
+            }
+        }
+    
+        .buttons-wrapper{
+            margin-top: 2.1vw;
+            margin-bottom: 0;
+        }
+    
+        .coments{
+    
+            .comments-button{
+                font-weight: 600;
+                font-size: 0.85vw;
+                padding: 1vw 1vw 1vw 1vw;
+                margin: 1.1vw 0 1.1vw 4.58vw;
+    
+                .comments-arrow{
+                    width: 0.7vw;
+                    height: 0.7vw;
+                }
+            }
+    
+            .comments-wrapper{
+                padding: 0 5.42vw 0 5.42vw;
+    
+                .coment-item{
+                    padding: 1.58vw 0;
+                    font-weight: 600;
+                    font-size: 0.85vw;
+                }
+                
+                .add-coment-input{
+                    margin-top: 1.52vw;
+                    height: 2.95vw;
+                    border-radius: 0.3vw;
+                    padding: 0 1vw;
+    
+                    &::placeholder{
+                        font-weight: 600;
+                        font-size: 0.85vw;
+                    }
+                }
+    
+                .buttons-wrapper{
+                    margin: 1.05vw 0 2.58vw 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    main{
+        padding-bottom: 8vw;
+    }
+
+    .film-wrapper{
+        margin: 0 17vw 4vw 17vw;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+        
+        .film-bg{
+    
+            .film-content{
+                padding: 4vw;
+
+                .poster-image{
+                    height: 28vw;
+                    width: 19.45vw;
+                    border-radius: 0.3vw;
+                }
+    
+                .film-info{
+                    margin-left: 2.5vw;
+                    font-size: 1.3vw;
+                    font-weight: 200;
+                    width: 35vw;
+                }
+            }
+        }
+    
+        .film-title{
+            font-size: 2.5vw;
+            font-weight: 600;
+            line-height: 2.5vw;
+        }
+    
+        .film-description{
+            margin-top: 1.7vw;
+            line-height: 2.2vw;
+        }
+    
+        .info-item{
+            margin-top: 1.5vw;
+    
+            .info-title{
+                line-height: 2.2vw;
+                width: 8.8vw;
+            }
+    
+            .info-content{
+                line-height: 1.3vw;
+                width: 26vw;
+            }
+    
+            .content-actors{
+                line-height: 2.2vw;
+            }
+        }
+    
+        .buttons-wrapper{
+            margin-top: 2.5vw;
+            margin-bottom: 0;
+        }
+    
+        .coments{
+    
+            .comments-button{
+                font-weight: 600;
+                font-size: 1.7vw;
+                padding: 1vw 1vw 1vw 1vw;
+                margin: 1.5vw 0 1.5vw 5vw;
+    
+                .comments-arrow{
+                    width: 1.3vw;
+                    height: 1.3vw;
+                }
+            }
+    
+            .comments-wrapper{
+                padding: 0 5.5vw 0 5.5vw;
+    
+                .coment-item{
+                    padding: 2.6vw 0;
+                    font-weight: 600;
+                    font-size: 1.7vw;
+                }
+                
+                .add-coment-input{
+                    margin-top: 2.7vw;
+                    height: 6vw;
+                    border-radius: 0.3vw;
+                    padding: 0 2vw;
+    
+                    &::placeholder{
+                        font-weight: 600;
+                        font-size: 1.6vw;
+                    }
+                }
+    
+                .buttons-wrapper{
+                    margin: 4vw 0 5vw 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    main{
+        padding-bottom: 7.57vw;
+    }
+
+    .film-wrapper{
+        margin: 0 7vw 8vw 7vw;
+        border-radius: 0.7vw;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+        
+        .film-bg{
+    
+            .film-content{
+                padding: 4vw 4vw 10vw 4vw;
+                
+                .poster-image{
+                    height: 32vw;
+                    width: 22.23vw;
+                    border-radius: 0.5vw;
+                }
+    
+                .film-info{
+                    margin-left: 3vw;
+                    font-size: 2.5vw;
+                    font-weight: 200;
+                    width: 52vw;
+                }
+            }
+        }
+    
+        .film-title{
+            font-size: 4vw;
+            font-weight: 600;
+            line-height: 4vw;
+        }
+    
+        .film-description{
+            margin-top: 1.58vw;
+            line-height: 3.5vw;
+        }
+    
+        .info-item{
+            margin-top: 3.5vw;
+    
+            .info-title{
+                line-height: 3.2vw;
+                width: 18vw;
+            }
+    
+            .info-content{
+                line-height: 2.5vw;
+                width: 33.5vw;
+            }
+    
+            .content-actors{
+                line-height: 3.2vw;
+            }
+        }
+    
+        .buttons-wrapper{
+            margin-top: 8vw;
+            margin-bottom: 0;
+        }
+    
+        .coments{
+    
+            .comments-button{
+                font-weight: 600;
+                font-size: 2.8vw;
+                padding: 2vw;
+                margin: 3vw 0 3vw 3.5vw;
+    
+                .comments-arrow{
+                    width: 2.3vw;
+                    height: 2.3vw;
+                }
+            }
+    
+            .comments-wrapper{
+                padding: 0 5vw;
+    
+                .coment-item{
+                    padding: 4vw 0;
+                    font-weight: 600;
+                    font-size: 2.4vw;
+                }
+                
+                .add-coment-input{
+                    margin-top: 4vw;
+                    height: 10vw;
+                    border-radius: 0.8vw;
+                    padding: 0 2vw;
+    
+                    &::placeholder{
+                        font-weight: 600;
+                        font-size: 2.4vw;
+                    }
+                }
+    
+                .buttons-wrapper{
+                    margin: 8vw 0 9vw 0;
+                }
+            }
+        }
+    }
+}

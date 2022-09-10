@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="add-film-checkbox" class="add-film-checkbox" type="checkbox">
+    <header id="header">
+        <div class="page-title">
+            <span>Films library</span>
+        </div>
+        <div class="add-film-button-wrapper">
+            <label for="add-film-checkbox" class="add-film-button">
+                <span class="add-circle"></span>
+                <span class="add-text">Add new film</span>
+            </label>
+        </div>
+    </header>
+    <main>
+        <div class="add-film-form-wrapper">
+            <label class="add-film-item">
+                <span>title</span>
+                <input class="add-input title-input" name="title" type="text">
+            </label>
+            <label class="add-film-item">
+                <span>year</span>
+                <input class="add-input year-input" name="year" type="number">
+            </label>
+            <label class="add-film-item">
+                <span>country</span>
+                <input class="add-input country-input" name="country" type="text">
+            </label>
+            <label class="add-film-item">
+                <span>genere</span>
+                <input class="add-input genere-input" name="genere" type="text">
+            </label>
+            <label class="add-film-item">
+                <span>poster (link)</span>
+                <input class="add-input link-input" name="link" type="text">
+            </label>
+            <label class="add-film-item">
+                <span>actors</span>
+                <input class="add-input actors-input" name="actors" type="text">
+            </label>
+            <label class="add-film-item">
+                <span>description</span>
+                <textarea
+                    class="add-input description description-input"
+                    name="description"
+                    type="text"
+                ></textarea>
+            </label>
+            <div class="buttons-wrapper">
+                <a class="btn pink form-cancel-button">Cancel</a>
+                <a class="btn blue form-add-button">Add</a>
+                <a class="btn blue form-edit-button">Edit</a>
+            </div>
+        </div>
+        <div class="films-container">
+            <!-- <div class="film-wrapper">
+                <div class="film-bg">
+                    <div class="film-content">
+                        <img src="./images/film.jpg" alt="film">
+                        <div class="film-info">
+                            <h2 class="film-title">Martian</h2>
+                            <p class="film-description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam officia fugiat sit aperiam animi recusandae maxime tenetur corporis reprehenderit beatae. Unde non praesentium dignissimos impedit totam libero? Pariatur illo aliquid natus reiciendis.
+                            </p>
+                            <div class="info-item">
+                                <div class="info-title title-country">country</div>
+                                <div class="info-content content-country">USA</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-title title-year">year</div>
+                                <div class="info-content content-year">2016</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-title title-genere">genere</div>
+                                <div class="info-content content-genere">Fantasy</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-title title-actors">actors</div>
+                                <div class="info-content content-actors">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, earum nihil laudantium eos inventore assumenda numquam.
+                                </div>
+                            </div>
+                            <div class="buttons-wrapper">
+                                <div class="btn pink">Delete</div>
+                                <div class="btn blue">Edit</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coments">
+                    <input id="1" class="comments-checkbox" type="checkbox">
+                    <label for="1" class="comments-button">
+                        <span class="comment-button-text">Comments:</span>
+                        <span class="comments-amount">3</span>
+                        <span class="comments-arrow"></span>
+                    </label>
+                    <div class="comments-wrapper">
+                        <div class="coment-item">
+                            Test comment
+                        </div>
+                        <div class="coment-item">
+                            Test comment
+                        </div>
+                        <input
+                            class="add-coment-input"
+                            type="text"
+                            placeholder="Add your comment"
+                        >
+                        <div class="buttons-wrapper">
+                            <div class="btn blue">Add</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="film-wrapper">
+                <div class="film-bg">
+                    <div class="film-content">
+                        <img src="./images/film.jpg" alt="film">
+                        <div class="film-info">
+                            <h2 class="film-title">Martian</h2>
+                            <p class="film-description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam officia fugiat sit aperiam animi recusandae maxime tenetur corporis reprehenderit beatae. Unde non praesentium dignissimos impedit totam libero? Pariatur illo aliquid natus reiciendis.
+                            </p>
+                            <div class="info-item">
+                                <div class="info-title title-country">country</div>
+                                <div class="info-content content-country">USA</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-title title-year">year</div>
+                                <div class="info-content content-year">2016</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-title title-genere">genere</div>
+                                <div class="info-content content-genere">Fantasy</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-title title-actors">actors</div>
+                                <div class="info-content content-actors">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, earum nihil laudantium eos inventore assumenda numquam.
+                                </div>
+                            </div>
+                            <div class="buttons-wrapper">
+                                <div class="btn pink">Delete</div>
+                                <div class="btn blue">Edit</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coments">
+                    <input id="2" class="comments-checkbox" type="checkbox">
+                    <label for="2" class="comments-button">
+                        <span class="comment-button-text">Comments:</span>
+                        <span class="comments-amount">3</span>
+                        <span class="comments-arrow"></span>
+                    </label>
+                    <div class="comments-wrapper">
+                        <div class="coment-item">
+                            Test comment
+                        </div>
+                        <div class="coment-item">
+                            Test comment
+                        </div>
+                        <input
+                            class="add-coment-input"
+                            type="text"
+                            placeholder="Add your comment"
+                        >
+                        <div class="buttons-wrapper">
+                            <div class="btn blue">Add</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, officia voluptates ad molestias deleniti rerum, odio temporibus accusantium harum saepe hic quod fugiat, fuga qui provident nihil deserunt voluptatum exercitationem ratione. Libero, maiores. Quod commodi dolorem alias mollitia, id consequatur tempora neque quas dicta, natus aspernatur obcaecati eveniet excepturi cumque in laudantium maxime rem libero, sunt vero reiciendis? Iure, autem? -->
+    </main>
+</body>
+</html>
