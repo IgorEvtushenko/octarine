@@ -42,8 +42,6 @@ export const actionForm = {
     editFilm(inputs){
         if(this._checkInputsValue(inputs)){
             const filmToEdit_id = currentFilm.getFilm()
-            // console.log(filmToEdit)
-            // console.log(inputs.titleInput.input.value)
 
             const data = dataBase.getDb()
         
@@ -60,8 +58,6 @@ export const actionForm = {
             editedFilm.id = filmToEdit_id
 
             result.push(editedFilm)
-
-            //console.log(editedFilm)
         
             dataBase.setDb(result)
         
