@@ -10,10 +10,6 @@ main{
 .film-wrapper{
     border-radius: $block-radius;
     overflow: hidden;
-
-    &:last-child{
-        margin-bottom: 7.57vw;
-    }
     
     .film-bg{
 
