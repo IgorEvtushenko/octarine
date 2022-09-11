@@ -25,6 +25,7 @@ main{
 
             .film-info{
                 color: $white;
+                word-break: break-all;
             }
         }
     }
@@ -84,7 +85,7 @@ main{
         }
 
         .comments-checkbox:checked ~ .comments-wrapper{
-            max-height: 150vh;
+            max-height: 100vh;
             overflow: auto;
         }
     }
